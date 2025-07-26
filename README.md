@@ -1,91 +1,173 @@
 # MultiHarvest
 A feature-rich Minecraft auto-harvest plugin that combines auto-tree chopping and chain mining functionality, providing players with an efficient resource collection experience.
-Plugin Overview
 <img width="1536" height="864" alt="主图" src="https://github.com/user-attachments/assets/8fa3b5d2-8c54-4a93-9930-214d0b90e487" />
+Plugin Overview
 MultiHarvest is a versatile auto-harvest plugin designed for Minecraft servers, primarily offering two core features: auto-tree chopping and chain mining. The plugin supports extensive configuration options, allowing server administrators to flexibly adjust parameters according to their needs, while providing players with an intuitive interface and detailed statistics.
 Key Features
 1. Auto Tree Chopping
+
 Tool Requirement: Must use an axe to trigger the auto tree chopping feature
+
 Tree Detection: Supports all vanilla tree types, including special trees with branches like acacia
+
 Leaf Handling: Configurable option to automatically clear leaves
+
 Root Detection: Auto tree chopping only triggers when cutting from the bottom of the tree
+
 Drop Collection: All drops are collected near the first broken block
+
 2. Chain Mining
+
 Tool Requirement: Must use a pickaxe to trigger the chain mining feature
+
 Ore Support: Supports all vanilla ores, including deepslate ores and nether ores
+
 Drop Handling: Correctly generates ore drops without resource loss
+
 Drop Collection: All drops are collected near the first broken block
+
 3. Usage Restrictions
+
 Cooldown: Configurable cooldown times for regular players and VIP players
+
 Usage Limits: Daily usage limits with higher limits for VIP players
+
 Permission Control: Supports multiple permission nodes for fine-grained control
+
 World Restrictions: Configure which worlds to enable/disable features (whitelist/blacklist modes)
+
 4. Notification System
+
 Multiple Notification Methods: Supports chat, action bar, and boss bar notifications
+
 Remaining Uses Alert: Shows remaining tree chopping or mining uses
+
 Notification Configuration: Toggle whether to always show notifications
+
 5. Configuration System
+
 Graphical Interface: Intuitive GUI for configuration
+
 Block Configuration: Add or remove block types for auto processing via GUI
+
 World Control: Control feature availability per world via GUI or commands
+
 Multi-language Support: Supports Chinese and English, with extensibility for other languages
+
 6. Statistics System
+
 Usage Statistics: Records number of trees cut and ores mined by players
+
 Block Type Statistics: Detailed counts of each block type broken
+
 Auto-save: Periodically auto-saves statistical data
+
 7. Tool Durability Management
+
 Reduced Consumption: Configurable option to reduce tool durability usage
+
 Consumption Factor: Adjustable ratio for durability consumption
+
 Command System
+
 Basic Commands
+
 /mh - Open main menu
+
 /mh toggle tree - Toggle auto tree chopping
+
 /mh toggle mine - Toggle chain mining
+
 /mh stats - View harvesting statistics
+
 /mh limits - View usage limits
+
 /mh lang <language code> - Switch language (e.g., /mh lang zh_CN or /mh lang en_US)
+
 Admin Commands
+
 /mh reload - Reload configuration
+
 /mh world - Open world control GUI
+
 /mh world list - List all worlds and their status
+
 /mh world toggle <world name> - Toggle feature status for specified world
+
 /mh world mode - Switch between whitelist/blacklist mode
+
 Permission Nodes
+
 Permission Node	Description	Default
+
 multiharvest.use	Basic permission to use the plugin	true
+
 multiharvest.tree	Allow use of auto tree chopping	true
+
 multiharvest.mine	Allow use of chain mining	true
+
 multiharvest.admin	Admin permission to modify configurations	op
+
 multiharvest.vip	VIP permission with shorter cooldowns and higher limits	false
+
 multiharvest.infinitydurability	Unlimited durability - tools won't break	false
+
 multiharvest.unlimited.tree	Unlimited auto tree chopping without daily limits	false
+
 multiharvest.unlimited.mine	Unlimited chain mining without daily limits	false
+
 multiharvest.unlimited.all	Unlimited use of all features without daily limits	false
+
 Configuration Files
+
 config.yml - Main configuration file containing all plugin settings
+
 lang/zh_CN.yml - Chinese language file
+
 lang/en_US.yml - English language file
+
 player_languages.yml - Player language preferences
+
 Technical Information
+
 Compatible Versions
+
 Minimum Version: Minecraft 1.13+
+
 Best Compatibility: Minecraft 1.16 - 1.21
+
 API Dependencies
+
 Bukkit/Spigot API
+
 No NMS code used, improving cross-version compatibility
+
 Special Features
+
 Unicode character support to resolve Chinese garbled text in console
+
 Action bar and boss bar notifications
+
 Custom block type configuration
+
 Support for Nether Update blocks (e.g., CRIMSON_STEM, WARPED_STEM)
+
 Support for deepslate ores (e.g., DEEPSLATE_DIAMOND_ORE)
+
 Support for copper ore (COPPER_ORE)
+
 Installation
+
 Download the latest version of the plugin JAR file
+
 Place the JAR file in your server's plugins folder
+
 Restart the server or use the /reload command (not recommended for production servers)
+
 The plugin will automatically generate default configuration files
+
 Modify configurations as needed, then use /mh reload to load new settings
+
 Screenshots
 <img width="1127" height="683" alt="普通玩家界面" src="https://github.com/user-attachments/assets/f99ba299-8b56-4999-87f2-7c1edcd16e5d" />
 <img width="1127" height="683" alt="普通玩家界面-禁用" src="https://github.com/user-attachments/assets/581f583d-7ca0-4624-8a29-0ac55c329034" />
@@ -102,7 +184,7 @@ Screenshots
 <img width="1127" height="683" alt="次数显示" src="https://github.com/user-attachments/assets/fe5dbded-6c11-4e5c-8549-d1bfb3f3ece9" />
 
 Config List：
-
+'''
 # MultiHarvest 插件配置文件
 # MultiHarvest Plugin Configuration File
 
@@ -140,8 +222,8 @@ usage-limits:
              # Daily usage count for VIP players
     notification: # 次数提醒方式
                   # Notification method for remaining counts
-      type: ACTION_BAR # 提醒类型：CHAT（聊天框）, ACTION_BAR（动作栏,1.9+版本服务器可用）, BOSS_BAR（Boss栏）
-                       # Notification type: CHAT, ACTION_BAR(Only for 1.9+Server), BOSS_BAR
+      type: ACTION_BAR # 提醒类型：CHAT（聊天框）, ACTION_BAR（动作栏）, BOSS_BAR（Boss栏）
+                       # Notification type: CHAT, ACTION_BAR, BOSS_BAR
       always-show: false # 是否总是显示（如果为false，则只在使用功能时显示）
                          # Whether to always show notifications (if false, only show when using the feature)
       boss-bar-color: GREEN # Boss栏颜色（仅在type为BOSS_BAR时有效）：BLUE, GREEN, PINK, PURPLE, RED, WHITE, YELLOW
@@ -274,7 +356,7 @@ statistics:
                   # Whether to auto-save statistical data
   save_interval: 300 # 自动保存间隔（秒）
                      # Auto-save interval (seconds)
-
+'''
 
 
 License
