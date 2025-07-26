@@ -1,372 +1,333 @@
 # MultiHarvest
+
+多功能 Minecraft 自动采集插件，整合了自动砍树和连锁挖矿功能，为玩家提供高效的资源收集体验。
+
 A feature-rich Minecraft auto-harvest plugin that combines auto-tree chopping and chain mining functionality, providing players with an efficient resource collection experience.
-<img width="1536" height="864" alt="主图" src="https://github.com/user-attachments/assets/8fa3b5d2-8c54-4a93-9930-214d0b90e487" />
-Plugin Overview
+
+
+
+![MultiHarvest Banner](https://github.com/user-attachments/assets/8fa3b5d2-8c54-4a93-9930-214d0b90e487)
+
+## 插件概述 (Plugin Overview)
+
+MultiHarvest 是一款为 Minecraft 服务器设计的多功能自动采集插件，主要提供自动砍树和连锁挖矿两大核心功能。插件支持丰富的配置选项，允许服务器管理员根据自身需求灵活调整参数，同时为玩家提供直观的操作界面和详细的统计信息。
+
 MultiHarvest is a versatile auto-harvest plugin designed for Minecraft servers, primarily offering two core features: auto-tree chopping and chain mining. The plugin supports extensive configuration options, allowing server administrators to flexibly adjust parameters according to their needs, while providing players with an intuitive interface and detailed statistics.
-Key Features
-##1. Auto Tree Chopping
 
-Tool Requirement: Must use an axe to trigger the auto tree chopping feature
+## 核心功能 (Key Features)
 
-Tree Detection: Supports all vanilla tree types, including special trees with branches like acacia
+### 1. 自动砍树 (Auto Tree Chopping)
 
-Leaf Handling: Configurable option to automatically clear leaves
 
-Root Detection: Auto tree chopping only triggers when cutting from the bottom of the tree
 
-Drop Collection: All drops are collected near the first broken block
+*   **工具要求**：必须使用斧子才能触发自动砍树功能
 
-##2. Chain Mining
+    **Tool Requirement**: Must use an axe to trigger the auto tree chopping feature
 
-Tool Requirement: Must use a pickaxe to trigger the chain mining feature
+*   **树木检测**：支持所有原版树木类型，包括金合欢树等带分支的特殊树木
 
-Ore Support: Supports all vanilla ores, including deepslate ores and nether ores
+    **Tree Detection**: Supports all vanilla tree types, including special trees with branches like acacia
 
-Drop Handling: Correctly generates ore drops without resource loss
+*   **树叶处理**：可配置是否自动清理树叶
 
-Drop Collection: All drops are collected near the first broken block
+    **Leaf Handling**: Configurable option to automatically clear leaves
 
-##3. Usage Restrictions
+*   **根部检测**：只有从树的底部开始砍才会触发自动砍树功能
 
-Cooldown: Configurable cooldown times for regular players and VIP players
+    **Root Detection**: Auto tree chopping only triggers when cutting from the bottom of the tree
 
-Usage Limits: Daily usage limits with higher limits for VIP players
+*   **掉落物收集**：所有掉落物会被归集到第一个被破坏的方块附近
 
-Permission Control: Supports multiple permission nodes for fine-grained control
+    **Drop Collection**: All drops are collected near the first broken block
 
-World Restrictions: Configure which worlds to enable/disable features (whitelist/blacklist modes)
+### 2. 连锁挖矿 (Chain Mining)
 
-##4. Notification System
 
-Multiple Notification Methods: Supports chat, action bar, and boss bar notifications
 
-Remaining Uses Alert: Shows remaining tree chopping or mining uses
+*   **工具要求**：必须使用镐子才能触发连锁挖矿功能
 
-Notification Configuration: Toggle whether to always show notifications
+    **Tool Requirement**: Must use a pickaxe to trigger the chain mining feature
 
-##5. Configuration System
+*   **矿石支持**：支持所有原版矿石，包括深层矿石和下界矿石
 
-Graphical Interface: Intuitive GUI for configuration
+    **Ore Support**: Supports all vanilla ores, including deepslate ores and nether ores
 
-Block Configuration: Add or remove block types for auto processing via GUI
+*   **掉落物处理**：正确生成矿石掉落物，不会丢失资源
 
-World Control: Control feature availability per world via GUI or commands
+    **Drop Handling**: Correctly generates ore drops without resource loss
 
-Multi-language Support: Supports Chinese and English, with extensibility for other languages
+*   **掉落物收集**：所有掉落物会被归集到第一个被破坏的方块附近
 
-##6. Statistics System
+    **Drop Collection**: All drops are collected near the first broken block
 
-Usage Statistics: Records number of trees cut and ores mined by players
+### 3. 使用限制 (Usage Restrictions)
 
-Block Type Statistics: Detailed counts of each block type broken
 
-Auto-save: Periodically auto-saves statistical data
 
-##7. Tool Durability Management
+*   **冷却时间**：可为普通玩家和 VIP 玩家设置不同的冷却时间
 
-Reduced Consumption: Configurable option to reduce tool durability usage
+    **Cooldown**: Configurable cooldown times for regular players and VIP players
 
-Consumption Factor: Adjustable ratio for durability consumption
+*   **使用次数**：可限制每日使用次数，VIP 玩家可设置更高的限制
 
-Command System
+    **Usage Limits**: Daily usage limits with higher limits for VIP players
 
-Basic Commands
+*   **权限控制**：支持多种权限节点，可精细控制玩家权限
 
-/mh - Open main menu
+    **Permission Control**: Supports multiple permission nodes for fine-grained control
 
-/mh toggle tree - Toggle auto tree chopping
+*   **世界限制**：可配置在哪些世界启用或禁用功能（白名单 / 黑名单模式）
 
-/mh toggle mine - Toggle chain mining
+    **World Restrictions**: Configure which worlds to enable/disable features (whitelist/blacklist modes)
 
-/mh stats - View harvesting statistics
+### 4. 通知系统 (Notification System)
 
-/mh limits - View usage limits
 
-/mh lang <language code> - Switch language (e.g., /mh lang zh_CN or /mh lang en_US)
 
-Admin Commands
+*   **多种通知方式**：支持聊天框、动作栏和 Boss 栏三种通知方式
 
-/mh reload - Reload configuration
+    **Multiple Notification Methods**: Supports chat, action bar, and boss bar notifications
 
-/mh world - Open world control GUI
+*   **剩余次数提醒**：显示玩家剩余的砍树或挖矿次数
 
-/mh world list - List all worlds and their status
+    **Remaining Uses Alert**: Shows remaining tree chopping or mining uses
 
-/mh world toggle <world name> - Toggle feature status for specified world
+*   **通知配置**：可配置是否总是显示通知
 
-/mh world mode - Switch between whitelist/blacklist mode
+    **Notification Configuration**: Toggle whether to always show notifications
 
-Permission Nodes
+### 5. 配置系统 (Configuration System)
 
-Permission Node	Description	Default
 
-multiharvest.use	Basic permission to use the plugin	true
 
-multiharvest.tree	Allow use of auto tree chopping	true
+*   **图形界面**：提供直观的 GUI 界面进行配置
 
-multiharvest.mine	Allow use of chain mining	true
+    **Graphical Interface**: Intuitive GUI for configuration
 
-multiharvest.admin	Admin permission to modify configurations	op
+*   **方块配置**：可通过 GUI 添加或移除可自动处理的方块类型
 
-multiharvest.vip	VIP permission with shorter cooldowns and higher limits	false
+    **Block Configuration**: Add or remove block types for auto processing via GUI
 
-multiharvest.infinitydurability	Unlimited durability - tools won't break	false
+*   **世界控制**：可通过 GUI 或命令控制在哪些世界启用功能
 
-multiharvest.unlimited.tree	Unlimited auto tree chopping without daily limits	false
+    **World Control**: Control feature availability per world via GUI or commands
 
-multiharvest.unlimited.mine	Unlimited chain mining without daily limits	false
+*   **多语言支持**：支持中文和英文，可扩展其他语言
 
-multiharvest.unlimited.all	Unlimited use of all features without daily limits	false
+    **Multi-language Support**: Supports Chinese and English, with extensibility for other languages
 
-Configuration Files
+### 6. 统计系统 (Statistics System)
 
-config.yml - Main configuration file containing all plugin settings
 
-lang/zh_CN.yml - Chinese language file
 
-lang/en_US.yml - English language file
+*   **使用统计**：记录玩家砍伐的树木和挖掘的矿石数量
 
-player_languages.yml - Player language preferences
+    **Usage Statistics**: Records number of trees cut and ores mined by players
 
-Technical Information
+*   **方块类型统计**：详细记录每种方块类型的破坏数量
 
-Compatible Versions
+    **Block Type Statistics**: Detailed counts of each block type broken
 
-Minimum Version: Minecraft 1.13+
+*   **自动保存**：定期自动保存统计数据
 
-Best Compatibility: Minecraft 1.16 - 1.21
+    **Auto-save**: Periodically auto-saves statistical data
 
-API Dependencies
+### 7. 工具耐久度管理 (Tool Durability Management)
 
-Bukkit/Spigot API
 
-No NMS code used, improving cross-version compatibility
 
-Special Features
+*   **减少消耗**：可配置减少工具耐久度消耗
 
-Unicode character support to resolve Chinese garbled text in console
+    **Reduced Consumption**: Configurable option to reduce tool durability usage
 
-Action bar and boss bar notifications
+*   **消耗因子**：可调整耐久度消耗的比例
 
-Custom block type configuration
+    **Consumption Factor**: Adjustable ratio for durability consumption
 
-Support for Nether Update blocks (e.g., CRIMSON_STEM, WARPED_STEM)
+## 命令系统 (Command System)
 
-Support for deepslate ores (e.g., DEEPSLATE_DIAMOND_ORE)
+### 基本命令 (Basic Commands)
 
-Support for copper ore (COPPER_ORE)
 
-Installation
 
-Download the latest version of the plugin JAR file
+| 命令 (Command)      | 描述 (Description)                                          |
+| ----------------- | --------------------------------------------------------- |
+| `/mh`             | 打开主菜单 (Open main menu)                                    |
+| `/mh toggle tree` | 切换自动砍树功能 (Toggle auto tree chopping)                      |
+| `/mh toggle mine` | 切换连锁挖矿功能 (Toggle chain mining)                            |
+| `/mh stats`       | 查看采集统计 (View harvesting statistics)                       |
+| `/mh limits`      | 查看使用次数限制 (View usage limits)                              |
+| `/mh lang <语言代码>` | 切换语言（如`/mh lang zh_CN`或`/mh lang en_US`）(Switch language) |
 
-Place the JAR file in your server's plugins folder
+### 管理员命令 (Admin Commands)
 
-Restart the server or use the /reload command (not recommended for production servers)
 
-The plugin will automatically generate default configuration files
 
-Modify configurations as needed, then use /mh reload to load new settings
+| 命令 (Command)             | 描述 (Description)                                        |
+| ------------------------ | ------------------------------------------------------- |
+| `/mh reload`             | 重新加载配置 (Reload configuration)                           |
+| `/mh world`              | 打开世界控制 GUI (Open world control GUI)                     |
+| `/mh world list`         | 列出所有世界及其状态 (List all worlds and their status)           |
+| `/mh world toggle <世界名>` | 切换指定世界的功能状态 (Toggle feature status for specified world) |
+| `/mh world mode`         | 切换白名单 / 黑名单模式 (Switch between whitelist/blacklist mode) |
 
-##Screenshots
-<img width="1127" height="683" alt="普通玩家界面" src="https://github.com/user-attachments/assets/f99ba299-8b56-4999-87f2-7c1edcd16e5d" />
-<img width="1127" height="683" alt="普通玩家界面-禁用" src="https://github.com/user-attachments/assets/581f583d-7ca0-4624-8a29-0ac55c329034" />
-<img width="1127" height="683" alt="普通玩家界面-禁用2" src="https://github.com/user-attachments/assets/b4be20ba-3e79-48c2-9212-91123e8534bc" />
-<img width="1127" height="683" alt="管理员界面" src="https://github.com/user-attachments/assets/f91b39b8-e351-4c50-b061-db9cdb152bc3" />
-<img width="1127" height="683" alt="砍树配置1" src="https://github.com/user-attachments/assets/b4e4fabf-b46d-4a97-808f-8058a93d2a07" />
-<img width="1127" height="683" alt="砍树配置2" src="https://github.com/user-attachments/assets/96b6cb4e-d4ff-4406-91e1-4cf4e6520229" />
-<img width="1127" height="683" alt="挖矿配置1" src="https://github.com/user-attachments/assets/614ca211-0513-4c20-8b09-9ce897d5e4cd" />
-<img width="1127" height="683" alt="挖矿配置2" src="https://github.com/user-attachments/assets/07f83956-2007-4431-b6d0-4509dbad7f11" />
-<img width="1127" height="683" alt="挖矿配置3" src="https://github.com/user-attachments/assets/224ed304-fd39-4036-b852-0a4748641ab9" />
-<img width="1127" height="683" alt="世界控制" src="https://github.com/user-attachments/assets/90c1fa3f-ccf8-44cc-9c52-018ef663873b" />
-<img width="1127" height="683" alt="砍树教程-根部" src="https://github.com/user-attachments/assets/1b454a0b-a679-4699-a8a3-02e727b818a8" />
-<img width="1127" height="683" alt="砍树教程-非根部" src="https://github.com/user-attachments/assets/e0cb7a4f-341c-4bb1-8a42-c427fd87e9e5" />
-<img width="1127" height="683" alt="次数显示" src="https://github.com/user-attachments/assets/fe5dbded-6c11-4e5c-8549-d1bfb3f3ece9" />
+## 权限节点 (Permission Nodes)
 
-##Config List：
- 
+
+
+| 权限节点 (Permission Node)            | 描述 (Description)                                                                   | 默认值 (Default) |
+| --------------------------------- | ---------------------------------------------------------------------------------- | ------------- |
+| `multiharvest.use`                | 使用插件的基本权限 (Basic permission to use the plugin)                                     | true          |
+| `multiharvest.tree`               | 允许使用自动砍树功能 (Allow use of auto tree chopping)                                       | true          |
+| `multiharvest.mine`               | 允许使用连锁挖矿功能 (Allow use of chain mining)                                             | true          |
+| `multiharvest.admin`              | 管理员权限，可以修改配置 (Admin permission to modify configurations)                           | op            |
+| `multiharvest.vip`                | VIP 权限，享有更短的冷却时间和更多的使用次数 (VIP permission with shorter cooldowns and higher limits) | false         |
+| `multiharvest.infinitydurability` | 无限耐久度权限，工具不会损坏 (Unlimited durability - tools won't break)                          | false         |
+| `multiharvest.unlimited.tree`     | 无限制使用自动砍树功能，不受每日次数限制 (Unlimited auto tree chopping without daily limits)           | false         |
+| `multiharvest.unlimited.mine`     | 无限制使用连锁挖矿功能，不受每日次数限制 (Unlimited chain mining without daily limits)                 | false         |
+| `multiharvest.unlimited.all`      | 无限制使用所有功能，不受每日次数限制 (Unlimited use of all features without daily limits)            | false         |
+
+## 配置文件 (Configuration Files)
+
+
+
+*   `config.yml` - 主配置文件，包含所有插件设置 (Main configuration file containing all plugin settings)
+
+*   `lang/zh_CN.yml` - 中文语言文件 (Chinese language file)
+
+*   `lang/en_US.yml` - 英文语言文件 (English language file)
+
+*   `player_languages.yml` - 玩家语言偏好设置 (Player language preferences)
+
+## 技术信息 (Technical Information)
+
+### 兼容版本 (Compatible Versions)
+
+
+
+*   **最低兼容版本**：Minecraft 1.13+ (Minimum Version: Minecraft 1.13+)
+
+*   **最佳兼容版本**：Minecraft 1.16 - 1.21 (Best Compatibility: Minecraft 1.16 - 1.21)
+
+### API 依赖 (API Dependencies)
+
+
+
+*   Bukkit/Spigot API
+
+*   未使用 NMS 代码，提高了跨版本兼容性 (No NMS code used, improving cross-version compatibility)
+
+### 特殊功能 (Special Features)
+
+
+
+*   支持 Unicode 字符显示，解决控制台中文乱码问题 (Unicode character support to resolve Chinese garbled text in console)
+
+*   支持动作栏和 Boss 栏通知 (Action bar and boss bar notifications)
+
+*   支持自定义方块类型配置 (Custom block type configuration)
+
+*   支持下界更新中添加的方块（如 CRIMSON\_STEM、WARPED\_STEM 等）(Support for Nether Update blocks)
+
+*   支持深层矿石（如 DEEPSLATE\_DIAMOND\_ORE）(Support for deepslate ores)
+
+*   支持铜矿（COPPER\_ORE）(Support for copper ore)
+
+## 安装方法 (Installation)
+
+
+
+1.  下载插件的最新版本 JAR 文件 (Download the latest version of the plugin JAR file)
+
+2.  将 JAR 文件放入服务器的`plugins`文件夹中 (Place the JAR file in your server's `plugins` folder)
+
+3.  重启服务器或使用`/reload`命令（不推荐在生产服务器使用）(Restart the server or use the `/reload` command)
+
+4.  插件会自动生成默认配置文件 (The plugin will automatically generate default configuration files)
+
+5.  根据需要修改配置，然后使用`/mh reload`加载新配置 (Modify configurations as needed, then use `/mh reload` to load new settings)
+
+## 截图 (Screenshots)
+
+
+
+| 功能 (Feature)                            | 截图 (Screenshot)                                                                                                 |
+| --------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| 玩家界面 (Player Interface)                 | ![Player Interface](https://github.com/user-attachments/assets/f99ba299-8b56-4999-87f2-7c1edcd16e5d)            |
+| 玩家界面（禁用状态）(Player Interface (Disabled)) | ![Player Interface (Disabled)](https://github.com/user-attachments/assets/581f583d-7ca0-4624-8a29-0ac55c329034) |
+| 管理员界面 (Admin Interface)                 | ![Admin Interface](https://github.com/user-attachments/assets/f91b39b8-e351-4c50-b061-db9cdb152bc3)             |
+| 砍树配置 (Tree Chop Configuration)          | ![Tree Chop Configuration](https://github.com/user-attachments/assets/b4e4fabf-b46d-4a97-808f-8058a93d2a07)     |
+| 挖矿配置 (Mine Configuration)               | ![Mine Configuration](https://github.com/user-attachments/assets/614ca211-0513-4c20-8b09-9ce897d5e4cd)          |
+| 世界控制 (World Control)                    | ![World Control](https://github.com/user-attachments/assets/90c1fa3f-ccf8-44cc-9c52-018ef663873b)               |
+| 砍树演示（根部）(Tree Chop Demo (Root))         | ![Tree Chop Demo (Root)](https://github.com/user-attachments/assets/1b454a0b-a679-4699-a8a3-02e727b818a8)       |
+| 次数显示 (Usage Limit Display)              | ![Usage Limit Display](https://github.com/user-attachments/assets/fe5dbded-6c11-4e5c-8549-d1bfb3f3ece9)         |
+
+## 配置示例 (Configuration Example)
+
+
+
 ```
-# MultiHarvest 插件配置文件
-# MultiHarvest Plugin Configuration File
+\# MultiHarvest 插件配置文件
 
-# 语言设置
-# Language settings
+\# MultiHarvest Plugin Configuration File
+
+\# 语言设置
+
+\# Language settings
+
 language:
-  default: zh_CN # 默认语言，可选值: zh_CN, en_US
-                 # Default language, available options: zh_CN, en_US
 
-# 冷却时间设置（秒）
-# Cooldown settings (seconds)
+&#x20; default: zh\_CN # 默认语言，可选值: zh\_CN, en\_US
+
+&#x20;                \# Default language, available options: zh\_CN, en\_US
+
+\# 冷却时间设置（秒）
+
+\# Cooldown settings (seconds)
+
 cooldown:
-  normal: 5 # 普通玩家冷却时间
-            # Cooldown time for regular players
-  vip: 2 # VIP玩家冷却时间
-         # Cooldown time for VIP players
 
-# 最大处理方块数限制
-# Maximum number of blocks processed limit
+&#x20; normal: 5 # 普通玩家冷却时间
+
+&#x20;           \# Cooldown time for regular players
+
+&#x20; vip: 2 # VIP玩家冷却时间
+
+&#x20;        \# Cooldown time for VIP players
+
+\# 最大处理方块数限制
+
+\# Maximum number of blocks processed limit
+
 limits:
-  max-tree-blocks: 200 # 单次自动砍树最大处理方块数
-                       # Maximum blocks processed in one auto tree chop
-  max-ore-blocks: 64 # 单次连锁挖矿最大处理方块数
-                     # Maximum blocks processed in one chain mine
 
-# 使用次数限制（每天）
-# Usage limits (per day)
-usage-limits:
-  tree-chop:
-    enabled: true # 是否启用次数限制
-                  # Whether to enable usage limits
-    default: 50 # 默认每天可使用次数
-                # Default daily usage count
-    vip: 100 # VIP玩家每天可使用次数
-             # Daily usage count for VIP players
-    notification: # 次数提醒方式
-                  # Notification method for remaining counts
-      type: ACTION_BAR # 提醒类型：CHAT（聊天框）, ACTION_BAR（动作栏）, BOSS_BAR（Boss栏）
-                       # Notification type: CHAT, ACTION_BAR, BOSS_BAR
-      always-show: false # 是否总是显示（如果为false，则只在使用功能时显示）
-                         # Whether to always show notifications (if false, only show when using the feature)
-      boss-bar-color: GREEN # Boss栏颜色（仅在type为BOSS_BAR时有效）：BLUE, GREEN, PINK, PURPLE, RED, WHITE, YELLOW
-                            # Boss bar color (only effective if type is BOSS_BAR): BLUE, GREEN, PINK, PURPLE, RED, WHITE, YELLOW
-      boss-bar-time: 3 # Boss栏显示时间（秒）
-                       # Boss bar display duration (seconds)
-  chain-mine:
-    enabled: true # 是否启用次数限制
-                  # Whether to enable usage limits
-    default: 30 # 默认每天可使用次数
-                # Default daily usage count
-    vip: 60 # VIP玩家每天可使用次数
-            # Daily usage count for VIP players
-    notification: # 次数提醒方式
-                  # Notification method for remaining counts
-      type: ACTION_BAR # 提醒类型：CHAT（聊天框）, ACTION_BAR（动作栏）, BOSS_BAR（Boss栏）
-                       # Notification type: CHAT, ACTION_BAR, BOSS_BAR
-      always-show: false # 是否总是显示（如果为false，则只在使用功能时显示）
-                         # Whether to always show notifications (if false, only show when using the feature)
-      boss-bar-color: BLUE # Boss栏颜色（仅在type为BOSS_BAR时有效）：BLUE, GREEN, PINK, PURPLE, RED, WHITE, YELLOW
-                           # Boss bar color (only effective if type is BOSS_BAR): BLUE, GREEN, PINK, PURPLE, RED, WHITE, YELLOW
-      boss-bar-time: 3 # Boss栏显示时间（秒）
-                       # Boss bar display duration (seconds)
+&#x20; max-tree-blocks: 200 # 单次自动砍树最大处理方块数
 
-# 世界设置
-# World settings
-worlds:
-  enabled-worlds:
-  - world
-  - world_nether
-  - world_the_end
-  # 如果为true，则只有列表中的世界可以使用功能；如果为false，则列表中的世界不能使用功能
-  # If true, only worlds in the list can use the features; if false, worlds in the list cannot use the features
-  whitelist-mode: true
+&#x20;                      \# Maximum blocks processed in one auto tree chop
 
-# 功能设置
-# Feature settings
-features:
-  tree-chop:
-    require-axe: true # 是否需要斧子才能触发自动砍树
-                      # Whether an axe is required to trigger auto tree chop
-    clear-leaves: true # 是否清理树叶
-                       # Whether to clear leaves
-    must-chop-bottom: true # 是否必须从树的底部开始砍
-                           # Whether to must chop from the bottom of the tree
-    collect-drops: true # 是否将掉落物归集到第一个被破坏的方块附近
-                        # Whether to collect drops near the first broken block
-  chain-mine:
-    require-pickaxe: true # 是否需要镐子才能触发连锁挖矿
-                          # Whether a pickaxe is required to trigger chain mine
-    collect-drops: true # 是否将掉落物归集到第一个被破坏的方块附近
-                        # Whether to collect drops near the first broken block
+&#x20; max-ore-blocks: 64 # 单次连锁挖矿最大处理方块数
 
-# 方块类型配置
-# Block type configuration
-blocks:
-  # 可自动砍伐的树木方块类型
-  # Tree block types that can be auto-chopped
-  tree-blocks:
-  - JUNGLE_LOG
-  - ACACIA_LOG
-  - MANGROVE_LOG
-  - CHERRY_LOG
-  - SPRUCE_LOG
-  - CRIMSON_STEM
-  - WARPED_STEM
-  - OAK_LOG
-  - BIRCH_LOG
-  - DARK_OAK_LOG
-  
-  # 树叶方块类型（用于自动砍树时判断）
-  # Leaf block types (used for auto tree chop judgment)
-  leaf-blocks:
-  - JUNGLE_LEAVES
-  - CHERRY_LEAVES
-  - MANGROVE_LEAVES
-  - DARK_OAK_LEAVES
-  - WARPED_WART_BLOCK
-  - OAK_LEAVES
-  - BIRCH_LEAVES
-  - SPRUCE_LEAVES
-  - NETHER_WART_BLOCK
-  - ACACIA_LEAVES
-  
-  # 可连锁挖掘的矿石方块类型
-  # Ore block types that can be chain-mined
-  ore-blocks:
-  - NETHER_QUARTZ_ORE
-  - ANCIENT_DEBRIS
-  - DEEPSLATE_DIAMOND_ORE
-  - DEEPSLATE_REDSTONE_ORE
-  - COAL_ORE
-  - DEEPSLATE_GOLD_ORE
-  - DEEPSLATE_IRON_ORE
-  - IRON_ORE
-  - EMERALD_ORE
-  - LAPIS_ORE
-  - DIAMOND_ORE
-  - DEEPSLATE_COPPER_ORE
-  - DEEPSLATE_EMERALD_ORE
-  - REDSTONE_ORE
-  - GOLD_ORE
-  - DEEPSLATE_LAPIS_ORE
-  - NETHER_GOLD_ORE
-  - COPPER_ORE
-  - DEEPSLATE_COAL_ORE
-
-# 效果设置
-# Effect settings
-effects:
-  particles: true # 是否显示粒子效果
-                  # Whether to show particle effects
-  sounds: true # 是否播放音效
-               # Whether to play sound effects
-
-# 工具耐久度设置
-# Tool durability settings
-durability:
-  reduced_consumption: true # 是否减少耐久度消耗
-                            # Whether to reduce durability consumption
-  factor: 0.2 # 耐久度消耗因子，值越小消耗越少
-              # Durability consumption factor, smaller value means less consumption
-
-# 统计设置
-# Statistics settings
-statistics:
-  enabled: true # 是否启用统计功能
-                # Whether to enable statistics function
-  auto_save: true # 是否自动保存统计数据
-                  # Whether to auto-save statistical data
-  save_interval: 300 # 自动保存间隔（秒）
-                     # Auto-save interval (seconds)
+&#x20;                    \# Maximum blocks processed in one chain mine
 ```
 
+## 许可证 (License)
 
-##License
-This plugin is open source under the MIT License. See the LICENSE file for details.
-##Author
-Golden_Dragon
-For any questions or suggestions, please submit an issue on GitHub or contact the plugin author.
+本插件基于 MIT 许可证开源。详情请参见 LICENSE 文件。(This plugin is open source under the MIT License. See the LICENSE file for details.)
 
-##Tips：If the console fails to display plugin information properly, please add the following code at the beginning of start.bat to ensure correct display:
+## 作者 (Author)
 
- ```chcp 65001```
+Golden\_Dragon
 
+如有任何问题或建议，请在 GitHub 上提交 issue 或联系插件作者。(For any questions or suggestions, please submit an issue on GitHub or contact the plugin author.)
+
+## 提示 (Tips)
+
+如控制台无法正常显示插件信息，请在`start.bat`的开头加上以下代码以正确显示：(If the console fails to display plugin information properly, add the following code at the beginning of `start.bat`:)
+
+
+
+```
+chcp 65001
+```
+
+> （注：文档部分内容可能由 AI 生成）
