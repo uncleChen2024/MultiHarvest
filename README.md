@@ -184,7 +184,8 @@ Screenshots
 <img width="1127" height="683" alt="次数显示" src="https://github.com/user-attachments/assets/fe5dbded-6c11-4e5c-8549-d1bfb3f3ece9" />
 
 Config List：
-'''
+ 
+```
 # MultiHarvest 插件配置文件
 # MultiHarvest Plugin Configuration File
 
@@ -356,7 +357,7 @@ statistics:
                   # Whether to auto-save statistical data
   save_interval: 300 # 自动保存间隔（秒）
                      # Auto-save interval (seconds)
-'''
+```
 
 
 License
@@ -367,4 +368,5 @@ For any questions or suggestions, please submit an issue on GitHub or contact th
 
 Tips：If the console fails to display plugin information properly, please add the following code at the beginning of start.bat to ensure correct display:
 
-chcp 65001
+ ```chcp 65001```
+
