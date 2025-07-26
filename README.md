@@ -4,7 +4,7 @@ A feature-rich Minecraft auto-harvest plugin that combines auto-tree chopping an
 Plugin Overview
 MultiHarvest is a versatile auto-harvest plugin designed for Minecraft servers, primarily offering two core features: auto-tree chopping and chain mining. The plugin supports extensive configuration options, allowing server administrators to flexibly adjust parameters according to their needs, while providing players with an intuitive interface and detailed statistics.
 Key Features
-1. Auto Tree Chopping
+##1. Auto Tree Chopping
 
 Tool Requirement: Must use an axe to trigger the auto tree chopping feature
 
@@ -16,7 +16,7 @@ Root Detection: Auto tree chopping only triggers when cutting from the bottom of
 
 Drop Collection: All drops are collected near the first broken block
 
-2. Chain Mining
+##2. Chain Mining
 
 Tool Requirement: Must use a pickaxe to trigger the chain mining feature
 
@@ -26,7 +26,7 @@ Drop Handling: Correctly generates ore drops without resource loss
 
 Drop Collection: All drops are collected near the first broken block
 
-3. Usage Restrictions
+##3. Usage Restrictions
 
 Cooldown: Configurable cooldown times for regular players and VIP players
 
@@ -36,7 +36,7 @@ Permission Control: Supports multiple permission nodes for fine-grained control
 
 World Restrictions: Configure which worlds to enable/disable features (whitelist/blacklist modes)
 
-4. Notification System
+##4. Notification System
 
 Multiple Notification Methods: Supports chat, action bar, and boss bar notifications
 
@@ -44,7 +44,7 @@ Remaining Uses Alert: Shows remaining tree chopping or mining uses
 
 Notification Configuration: Toggle whether to always show notifications
 
-5. Configuration System
+##5. Configuration System
 
 Graphical Interface: Intuitive GUI for configuration
 
@@ -54,7 +54,7 @@ World Control: Control feature availability per world via GUI or commands
 
 Multi-language Support: Supports Chinese and English, with extensibility for other languages
 
-6. Statistics System
+##6. Statistics System
 
 Usage Statistics: Records number of trees cut and ores mined by players
 
@@ -62,7 +62,7 @@ Block Type Statistics: Detailed counts of each block type broken
 
 Auto-save: Periodically auto-saves statistical data
 
-7. Tool Durability Management
+##7. Tool Durability Management
 
 Reduced Consumption: Configurable option to reduce tool durability usage
 
@@ -168,7 +168,7 @@ The plugin will automatically generate default configuration files
 
 Modify configurations as needed, then use /mh reload to load new settings
 
-Screenshots
+##Screenshots
 <img width="1127" height="683" alt="普通玩家界面" src="https://github.com/user-attachments/assets/f99ba299-8b56-4999-87f2-7c1edcd16e5d" />
 <img width="1127" height="683" alt="普通玩家界面-禁用" src="https://github.com/user-attachments/assets/581f583d-7ca0-4624-8a29-0ac55c329034" />
 <img width="1127" height="683" alt="普通玩家界面-禁用2" src="https://github.com/user-attachments/assets/b4be20ba-3e79-48c2-9212-91123e8534bc" />
@@ -183,7 +183,7 @@ Screenshots
 <img width="1127" height="683" alt="砍树教程-非根部" src="https://github.com/user-attachments/assets/e0cb7a4f-341c-4bb1-8a42-c427fd87e9e5" />
 <img width="1127" height="683" alt="次数显示" src="https://github.com/user-attachments/assets/fe5dbded-6c11-4e5c-8549-d1bfb3f3ece9" />
 
-Config List：
+##Config List：
  
 ```
 # MultiHarvest 插件配置文件
@@ -360,13 +360,13 @@ statistics:
 ```
 
 
-License
+##License
 This plugin is open source under the MIT License. See the LICENSE file for details.
-Author
+##Author
 Golden_Dragon
 For any questions or suggestions, please submit an issue on GitHub or contact the plugin author.
 
-Tips：If the console fails to display plugin information properly, please add the following code at the beginning of start.bat to ensure correct display:
+##Tips：If the console fails to display plugin information properly, please add the following code at the beginning of start.bat to ensure correct display:
 
  ```chcp 65001```
 
