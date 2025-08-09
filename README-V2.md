@@ -8,7 +8,7 @@
 
 > 🌟 一个功能强大、易于使用的Minecraft自动采集插件，让挖矿砍树更高效！
 
-![插件主界面](docs/images/main-gui.png)
+![插件主界面](https://cdn.modrinth.com/data/cached_images/871cac91c8eee90ffc681065b0c6f158af1bb1ab.gif)
 *插件主界面展示*
 
 ### ✨ 核心功能
@@ -18,7 +18,7 @@
 - **智能识别** - 自动识别各种树木类型
 - **工具保护** - 自动停止当工具即将损坏时
 
-![自动砍树演示](docs/images/tree-chopping-demo.gif)
+![自动砍树演示](https://cdn.modrinth.com/data/cached_images/a843bad8c1c983a3fbe2edfbc37321ba0c70929a.gif)
 *自动砍树功能演示*
 
 #### ⛏️ 连锁挖矿
@@ -26,7 +26,7 @@
 - **经验获取** - 连锁挖矿也能获得原版经验，支持经验系数调节
 - **范围控制** - 智能限制挖掘范围，避免过度破坏
 
-![连锁挖矿演示](docs/images/chain-mining-demo.gif)
+![连锁挖矿演示](https://cdn.modrinth.com/data/cached_images/44dc272f72145e1dc560b6e04715b83492f1949e.gif)
 *连锁挖矿功能演示*
 
 #### 🎮 可视化配置
@@ -34,7 +34,7 @@
 - **实时调节** - 所有设置可通过界面实时修改
 - **多语言支持** - 完整的中英文界面切换
 
-![配置界面](docs/images/config-gui.png)
+![配置界面](https://cdn.modrinth.com/data/cached_images/7c3cce082cfd095b411010035a35ed63d698d1cb.gif)
 *配置界面展示*
 
 ### 🚀 特色优势
@@ -54,7 +54,7 @@
 - **类型统计** - 分类统计不同方块的采集量
 - **可视化查看** - 通过命令查看个人统计
 
-![统计界面](docs/images/stats-display.png)
+![统计界面](https://cdn.modrinth.com/data/cached_images/59a31097bd1963314f9dad51ad0d489038d5a2c1.gif)
 *数据统计展示*
 
 ### 🎯 使用方法
@@ -77,7 +77,7 @@
 2. 点击对应图标开关功能
 3. 管理员可进入配置界面调整设置
 
-![操作演示](docs/images/gui-operation.gif)
+![操作演示](https://cdn.modrinth.com/data/cached_images/7c3cce082cfd095b411010035a35ed63d698d1cb.gif)
 *GUI操作演示*
 
 ### ⚙️ 配置特点
@@ -93,7 +93,7 @@
 - **个人设置** - 每个玩家可选择界面语言
 - **实时切换** - 语言切换立即生效
 
-![语言切换](docs/images/language-switch.png)
+![语言切换](https://cdn.modrinth.com/data/cached_images/9685ad484a4c826d8727658492ae0994f6e457e4.gif)
 *语言切换界面*
 
 #### 📱 通知系统
@@ -115,7 +115,8 @@
 
 ### 📋 服务器要求
 
-- **Minecraft版本**: 1.21+
+- **最低兼容版本**：Minecraft 1.13+
+- **最佳兼容版本**：Minecraft 1.16 - 1.21
 - **服务端**: Spigot/Paper
 - **Java版本**: 17+
 - **权限插件**: 可选（支持主流权限插件）
@@ -129,8 +130,6 @@
 ✅ **多语言** - 中英文完整支持  
 ✅ **持续更新** - 活跃维护，功能完善  
 
-![功能对比](docs/images/feature-comparison.png)
-*功能对比图*
 
 ---
 
@@ -142,7 +141,7 @@
 
 > 🌟 A powerful and user-friendly Minecraft auto-harvesting plugin that makes mining and tree chopping more efficient!
 
-![Plugin Main Interface](docs/images/main-gui-en.png)
+![Plugin Main Interface](https://cdn.modrinth.com/data/cached_images/1badcd4823c99536cc049f3a6c4ae33960f504c8.gif)
 *Plugin Main Interface*
 
 ### ✨ Core Features
@@ -152,7 +151,7 @@
 - **Smart Recognition** - Automatically identifies various tree types
 - **Tool Protection** - Automatically stops when tools are about to break
 
-![Tree Chopping Demo](docs/images/tree-chopping-demo.gif)
+![Tree Chopping Demo](https://cdn.modrinth.com/data/cached_images/eb867a3dead5345e5da12522d11f651728bee1ca.gif)
 *Auto Tree Chopping Demo*
 
 #### ⛏️ Chain Mining
@@ -160,7 +159,7 @@
 - **Experience Gain** - Chain mining also provides vanilla experience with configurable multipliers
 - **Range Control** - Smart mining range limits to prevent excessive destruction
 
-![Chain Mining Demo](docs/images/chain-mining-demo.gif)
+![Chain Mining Demo](https://cdn.modrinth.com/data/cached_images/b8f05d7e4f9322e05f0f34f14d799420b96620d3.gif)
 *Chain Mining Demo*
 
 #### 🎮 Visual Configuration
@@ -168,7 +167,7 @@
 - **Real-time Adjustment** - All settings can be modified through the interface in real-time
 - **Multi-language Support** - Complete Chinese/English interface switching
 
-![Configuration Interface](docs/images/config-gui-en.png)
+![Configuration Interface](https://cdn.modrinth.com/data/cached_images/7081a39bfa7c824208bde6d4d2b4fbc7cfd5cfa0.gif)
 *Configuration Interface*
 
 ### 🚀 Key Advantages
@@ -188,7 +187,7 @@
 - **Type Statistics** - Categorized statistics for different block types
 - **Visual Display** - View personal statistics through commands
 
-![Statistics Display](docs/images/stats-display-en.png)
+![Statistics Display](https://cdn.modrinth.com/data/cached_images/7e63ba58a3d18cf5ef36eba6417d94b988398353.gif)
 *Statistics Display*
 
 ### 🎯 How to Use
@@ -211,7 +210,7 @@
 2. Click corresponding icons to toggle features
 3. Admins can enter configuration interfaces to adjust settings
 
-![GUI Operation Demo](docs/images/gui-operation.gif)
+![GUI Operation Demo](https://cdn.modrinth.com/data/cached_images/7081a39bfa7c824208bde6d4d2b4fbc7cfd5cfa0.gif)
 *GUI Operation Demo*
 
 ### ⚙️ Configuration Features
@@ -227,7 +226,7 @@
 - **Personal Settings** - Each player can choose interface language
 - **Real-time Switching** - Language changes take effect immediately
 
-![Language Switch](docs/images/language-switch-en.png)
+![Language Switch](https://cdn.modrinth.com/data/cached_images/390a90eee31a1564c844598eee1e2091aa833505.gif)
 *Language Switch Interface*
 
 #### 📱 Notification System
@@ -249,7 +248,8 @@
 
 ### 📋 Server Requirements
 
-- **Minecraft Version**: 1.21+
+- **Minimum Version:**：Minecraft 1.13+ 
+- **Best Compatibility:**：Minecraft 1.16 - 1.21 
 - **Server Software**: Spigot/Paper
 - **Java Version**: 17+
 - **Permission Plugin**: Optional (supports mainstream permission plugins)
@@ -263,8 +263,6 @@
 ✅ **Multi-language** - Complete Chinese/English support  
 ✅ **Continuous Updates** - Active maintenance, feature improvements  
 
-![Feature Comparison](docs/images/feature-comparison.png)
-*Feature Comparison Chart*
 
 ---
 
@@ -281,5 +279,5 @@ If you have any questions or suggestions, feel free to contact us through:
 - 参与讨论提出建议 | Join discussions for suggestions  
 - 贡献代码完善功能 | Contribute code for improvements
 
-![联系方式](docs/images/contact-info.png)
-*联系方式 | Contact Information*
+[![联系方式](docs/images/contact-info.png)
+*联系方式 | Contact Information*](https://github.com/uncleChen2024/MultiHarvest/issues)
